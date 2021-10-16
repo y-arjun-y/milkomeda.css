@@ -39,6 +39,6 @@ Alternatively, you can see the raw CSS file by going [here](https://raw.githubus
 
 ## Credit
 
-sakura: https://github.com/oxalorg/sakura
-Andromeda: https://github.com/EliverLara/Andromeda
+sakura: https://github.com/oxalorg/sakura  
+Andromeda: https://github.com/EliverLara/Andromeda  
 HTML5 Test Page: https://github.com/cbracco/html5-test-page
