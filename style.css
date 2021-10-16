@@ -1,0 +1,414 @@
+/* milkomeda.css classless CSS
+    Credit for Andromeda: https://github.com/EliverLara/Andromeda
+    Credit for CSS base: https://github.com/oxalorg/sakura/
+    GitHub: https://github.com/y-arjun-y/milkomeda.css
+    Licensed under the MIT License.
+*/
+
+/* Table of Contents
+    1. Global
+      a) Font
+      b) Variables
+      c) Selection
+      d) Document Styling
+    2. Text
+      a) Headings
+      b) Lists and Navigation Bar
+      c) Paragraph
+      d) Blockquotes
+      e) Preformatted Text and Code
+      f) Special Text Elements
+    3. Links
+    4. Images
+    5. Tables
+    6. Inputs
+    7. Buttons
+    8. Footer
+    9. Responsiveness
+*/
+
+/* 1. Global */
+/*  a) Font */
+@import url("http://fonts.cdnfonts.com/css/Monaco");
+
+/*  b) Variables */
+:root {
+  --font: "Monaco";
+  --font-color: #ffffff;
+  --background-color: #22262f;
+  --h1-color: #ffe553;
+  --h2-color: #fe006c;
+  --h3-before-color: #d140ee;
+  --h3-color: #00e7c1;
+  --h4-before-color: #d140ee;
+  --h4-color: #ffe553;
+  --h5-color: #575861;
+  --h6-color: #575861;
+  --alt-color: #9b9ea1;
+  --link-color: #0073ff;
+}
+
+/*  c) Selection */
+::selection {
+  background-color: var(--alt-color);
+}
+
+pre::selection,
+code::selection {
+  background-color: gray;
+}
+
+/*  d) Document Styling */
+html {
+  font-size: 62.5%;
+  font-family: var(--font);
+}
+
+body {
+  font-size: 1.6rem;
+  line-height: 1.7;
+  max-width: 40em;
+  margin: auto;
+  color: var(--font-color);
+  background-color: var(--background-color);
+  padding: 13px;
+}
+
+/* 2. Text */
+/*  a) Headings */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  line-height: 1.1;
+  font-weight: 700;
+  margin-top: 3rem;
+  margin-bottom: 2rem;
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+  -ms-word-break: break-all;
+  word-break: break-word;
+  -ms-hyphens: auto;
+  -moz-hyphens: auto;
+  -webkit-hyphens: auto;
+  hyphens: auto;
+}
+
+h1 a,
+h2 a,
+h3 a,
+h4 a,
+h5 a,
+h6 a {
+  text-decoration: none;
+  color: #303030;
+}
+
+h1::before {
+  content: ".";
+}
+
+h1 {
+  font-size: 2.35em;
+  color: var(--h1-color);
+  text-transform: lowercase;
+}
+
+h2::before {
+  content: "#";
+}
+
+h2 {
+  font-size: 2em;
+  color: var(--h2-color);
+  text-transform: lowercase;
+}
+
+h3:before {
+  color: var(--h3-before-color);
+  content: "var ";
+}
+
+h3 {
+  font-size: 1.75em;
+  color: var(--h3-color);
+  text-transform: lowercase;
+}
+
+h4:before {
+  color: var(--h4-before-color);
+  content: "def ";
+}
+
+h4 {
+  font-size: 1.5em;
+  color: var(--h4-color);
+  text-transform: lowercase;
+}
+
+h5:before {
+  content: "/* ";
+}
+
+h5 {
+  font-size: 1.25em;
+  color: var(--h5-color);
+  text-transform: lowercase;
+}
+
+h5:after {
+  content: " */";
+}
+
+h6:before {
+  content: "/* ";
+}
+
+h6 {
+  font-size: 1em;
+  color: var(--h6-color);
+  text-transform: lowercase;
+}
+
+h6:after {
+  content: " */";
+}
+
+/* b) Lists and Navigation Bar */
+ul {
+  padding-left: 1.4em;
+  margin-top: 0px;
+  margin-bottom: 2.5rem;
+}
+
+li {
+  margin-bottom: 0.4em;
+}
+
+nav a {
+  margin-right: 0.5em;
+}
+
+/*  c) Paragraph */
+p {
+  margin-top: 0px;
+  margin-bottom: 2.5rem;
+}
+
+/*  d) Blockquotes */
+blockquote {
+  margin-left: 0px;
+  margin-right: 0px;
+  padding-left: 1em;
+  padding-top: 0.8em;
+  padding-bottom: 0.8em;
+  padding-right: 0.8em;
+  border-left: 5px solid var(--alt-color);
+  margin-bottom: 2.5rem;
+}
+
+blockquote p {
+  margin-bottom: 0;
+}
+
+/* e) Preformatted Text and Code */
+pre {
+  background-color: black;
+  color: white;
+  display: block;
+  padding: 1em;
+  overflow-x: auto;
+  margin-top: 0px;
+  margin-bottom: 2.5rem;
+}
+
+code {
+  font-size: 0.9em;
+  padding: 0 0.5em;
+  background-color: black;
+  color: white;
+  white-space: pre-wrap;
+}
+
+pre > code {
+  padding: 0;
+  background-color: transparent;
+  white-space: pre;
+}
+
+/*  f) Special Text Elements */
+small,
+sub,
+sup {
+  font-size: 75%;
+}
+
+small small {
+  font-size: 100%;
+}
+
+time {
+  font-style: normal;
+  margin-right: 0.5em;
+}
+
+hr {
+  border-color: var(--alt-color);
+}
+
+/* 3. Links */
+a {
+  color: var(--link-color);
+  text-decoration: none;
+}
+
+a:hover {
+  color: var(--alt-color);
+}
+
+a h1,
+a h2,
+a h3,
+a h4,
+a h5,
+a h6 {
+  opacity: 65%;
+}
+
+a h1:hover,
+a h2:hover,
+a h3:hover,
+a h4:hover,
+a h5:hover,
+a h6:hover {
+  opacity: 100%;
+}
+
+/* 4. Images */
+img {
+  max-width: 100%;
+  margin-top: 0px;
+  margin-bottom: 1.5rem;
+}
+
+/* 5. Tables */
+table {
+  text-align: justify;
+  width: 100%;
+  border-collapse: collapse;
+}
+
+td,
+th {
+  padding: 0.5em;
+  border-bottom: 1px solid white;
+}
+
+/* 6. Inputs */
+input,
+textarea {
+  border: 1px solid black;
+}
+
+input:focus,
+textarea:focus {
+  border: 1px solid var(--alt-color);
+}
+
+textarea {
+  width: 100%;
+}
+
+textarea,
+select,
+input[type] {
+  color: black;
+  padding: 6px 10px;
+  margin-bottom: 10px;
+  background-color: white;
+  border: 1px solid white;
+  border-radius: 4px;
+  box-shadow: none;
+  box-sizing: border-box;
+}
+
+textarea:focus,
+select:focus,
+input[type]:focus {
+  border: 1px solid var(--alt-color);
+  outline: 0;
+}
+
+input[type="checkbox"]:focus {
+  outline: 1px dotted var(--alt-color);
+}
+
+label,
+legend,
+fieldset {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: 600;
+}
+
+/* 7. Buttons */
+.button,
+button,
+input[type="submit"],
+input[type="reset"],
+input[type="button"] {
+  display: inline-block;
+  padding: 5px 10px;
+  text-align: center;
+  text-decoration: none;
+  white-space: nowrap;
+  background-color: var(--background-color);
+  color: black;
+  border-radius: 1px;
+  border: 1px solid var(--alt-color);
+  cursor: pointer;
+  box-sizing: border-box;
+}
+
+.button[disabled],
+button[disabled],
+input[type="submit"][disabled],
+input[type="reset"][disabled],
+input[type="button"][disabled] {
+  cursor: default;
+  opacity: 0.5;
+}
+
+.button:focus:enabled,
+.button:hover:enabled,
+button:focus:enabled,
+button:hover:enabled,
+input[type="submit"]:focus:enabled,
+input[type="submit"]:hover:enabled,
+input[type="reset"]:focus:enabled,
+input[type="reset"]:hover:enabled,
+input[type="button"]:focus:enabled,
+input[type="button"]:hover:enabled {
+  background-color: var(--alt-color);
+  outline: 0;
+}
+
+/* 8. Footer */
+footer {
+  margin-top: 1em;
+}
+
+/* 9. Responsiveness */
+@media (max-width: 684px) {
+  body {
+    font-size: 1.53rem;
+  }
+}
+
+@media (max-width: 382px) {
+  body {
+    font-size: 1.35rem;
+  }
+}
